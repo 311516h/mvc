@@ -1,4 +1,4 @@
-package hello.mvc.domain;
+package hello.mvc.domain.member;
 
 import java.util.ArrayList;
 import java.util.HashMap;

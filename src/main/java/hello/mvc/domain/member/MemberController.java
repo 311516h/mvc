@@ -1,4 +1,4 @@
-package hello.mvc.domain;
+package hello.mvc.domain.member;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

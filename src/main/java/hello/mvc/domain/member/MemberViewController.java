@@ -1,5 +1,7 @@
-package hello.mvc.domain;
+package hello.mvc.domain.member;
 
+import hello.mvc.domain.member.Member;
+import hello.mvc.domain.member.MemberRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -36,7 +38,7 @@ public class MemberViewController {
 
     //회원 수정 폼
     @GetMapping("/{id}/edit")
-    public String editForm(@PathVariable("id") Long id, Model model) {
+    public String editForm(@PathVariable Long id, Model model) {
         Member member = memberRepository.findById(id);
         model.addAttribute("member", member);
         return "members/edit";
@@ -44,14 +46,14 @@ public class MemberViewController {
 
     //회원 수정 처리
     @PostMapping("{id}/edit")
-    public String update(@PathVariable("id") Long id, @ModelAttribute Member updatedMember) {
+    public String update(@PathVariable Long id, @ModelAttribute Member updatedMember) {
         memberRepository.update(id, updatedMember);
         return "redirect:/members";
     }
 
     //회원 삭제
     @PostMapping("{id}/delete")
-    public String delete(@PathVariable("id") Long id) {
+    public String delete(@PathVariable Long id) {
         memberRepository.delete(id);
         return "redirect:/members";
     }

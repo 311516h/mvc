@@ -1,4 +1,4 @@
-package hello.mvc.domain;
+package hello.mvc.domain.member;
 
 import lombok.Getter;
 import lombok.Setter;

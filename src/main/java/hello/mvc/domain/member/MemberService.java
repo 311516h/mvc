@@ -1,4 +1,7 @@
-package hello.mvc.domain;
+package hello.mvc.domain.member;
+
+import hello.mvc.domain.member.Member;
+import hello.mvc.domain.member.MemberRepository;
 
 public class MemberService {
 

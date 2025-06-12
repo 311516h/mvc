@@ -1,5 +1,7 @@
 package hello.mvc.domain;
 
+import hello.mvc.domain.member.Member;
+import hello.mvc.domain.member.MemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
